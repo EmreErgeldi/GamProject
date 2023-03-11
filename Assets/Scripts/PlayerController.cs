@@ -7,12 +7,23 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private float speed = 10f;
     private Animator animator;
+    public float rotationSpeed = 10f;
+    public float mouseSensivity = 700f;
+    public Transform pivot;
+    private float xRotation = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+
+    }
+    private void Awake()
+    {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
+        //Cursor
+        //Cursor.visible = false; // ekranda mouse gözüksün mü
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -27,9 +38,30 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isSprinting", true);
         }
-        if (Input.GetKeyUp(KeyCode.W)){
-            animator.SetBool("isSprinting", false);
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("isBackward", true);
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("isLeft", true);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isRight", true);
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)|| Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+           animator.SetBool("isSprinting", false);
+           animator.SetBool("isBackward", false);
+           animator.SetBool("isLeft", false);
+           animator.SetBool("isRight", false);
+        }
+        transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensivity, 0);
+        xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensivity;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        Camera.main.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+
     }
 
 }
