@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform pivot;
     private float xRotation = 0f;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +33,6 @@ public class PlayerController : MonoBehaviour
         Vector3 moveInputs = Input.GetAxis("Horizontal") * transform.right + Input.GetAxis("Vertical") * transform.forward;
         Vector3 moveVelocity = moveInputs * Time.deltaTime * speed;
 
-        characterController.Move(moveVelocity);
-
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("isSprinting", true);
@@ -45,6 +44,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             animator.SetBool("isLeft", true);
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("RolLeft", true);
+            Invoke("ResetRoCooldown", 1.14f);
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -60,8 +64,14 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensivity, 0);
         xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensivity;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        Camera.main.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        // Camera.main.transform.localRotation = Quaternion.Euler(xRotation, 0, 0); aþaðý bakma
 
+        characterController.Move(moveVelocity);
+        print(moveVelocity);
+    }
+    void ResetRoCooldown()
+    {
+        animator.SetBool("RolLeft", false);
     }
 
 }
