@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 moveInputs = Input.GetAxis("Horizontal") * transform.right + Input.GetAxis("Vertical") * transform.forward;
         Vector3 moveVelocity = moveInputs * Time.deltaTime * speed;
-
+        //Movement
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("isSprinting", true);
@@ -43,15 +43,28 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isLeft", true);
         }
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.A))
-        {
-            animator.SetBool("RolLeft", true);
-            Invoke("ResetRoCooldown", 1.14f);
-        }
+        
         if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("isRight", true);
         }
+        //Rolling
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("RollLeft", true);
+            Invoke("ResetRoCooldown", 1.14f);
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("RollRight", true);
+            Invoke("ResetRoCooldown", 1.14f);
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("RollForward", true);
+            Invoke("ResetRoCooldown", 1.14f);
+        }
+        //Canceling
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)|| Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
            animator.SetBool("isSprinting", false);
@@ -66,9 +79,12 @@ public class PlayerController : MonoBehaviour
 
         characterController.Move(moveVelocity);
     }
+    //Roll Animation Cancel Timer
     void ResetRoCooldown()
     {
-        animator.SetBool("RolLeft", false);
+        animator.SetBool("RollLeft", false);
+        animator.SetBool("RollForward", false);
+        animator.SetBool("RollRight", false);
     }
 
 }
