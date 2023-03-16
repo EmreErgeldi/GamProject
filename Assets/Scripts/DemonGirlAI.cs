@@ -25,10 +25,11 @@ public class DemonGirlAI : MonoBehaviour
         if(distance <= lookRadius)
         {
             agent.SetDestination(target.position);
-
+            agent.isStopped = false;
             if(distance < agent.stoppingDistance)
             {
                 FaceTarget();
+                agent.isStopped = true;
             }
         }
 
