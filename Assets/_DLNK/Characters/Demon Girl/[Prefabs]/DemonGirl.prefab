@@ -2006,6 +2006,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4104614698926284}
   - component: {fileID: -7135722914521834462}
+  - component: {fileID: 1659885725}
+  - component: {fileID: 1659885724}
   m_Layer: 0
   m_Name: DemonGirl
   m_TagString: Untagged
@@ -2022,7 +2024,7 @@ Transform:
   m_GameObject: {fileID: 1639818050706832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4007570355682014}
@@ -2041,6 +2043,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30e0978636a83644ab269fe388ac1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookRadius: 20
+  animator: {fileID: 95531330028331018}
+--- !u!54 &1659885725
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639818050706832}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &1659885724
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639818050706832}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 20
+  m_Acceleration: 1
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 4
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1641359354525550
 GameObject:
   m_ObjectHideFlags: 0
