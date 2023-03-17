@@ -14833,26 +14833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 411010786, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
-      propertyPath: m_Speed
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 411010786, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 411010786, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
-      propertyPath: m_Acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 411010786, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 411010786, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8252420311106116109, guid: 194ffd0653835f54ebd7c74ba6eaaed9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -14994,26 +14974,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 759524781, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
-      propertyPath: m_Speed
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 759524781, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 759524781, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
-      propertyPath: m_Acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 759524781, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 759524781, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 645428764511485880, guid: 9f27ffd01c04b384ba10ed2c7254aeed, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -48163,26 +48123,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1659885724, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_Speed
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659885724, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659885724, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_Acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659885724, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659885724, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_Name
       value: DemonGirl
