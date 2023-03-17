@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public float rotationSpeed = 10f;
     public float mouseSensivity = 700f;
-    public Transform pivot;
     private float xRotation = 0f;
+    public float attackSpeed = 5f;
 
 
     // Start is called before the first frame update
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isLeft", true);
         }
-        
+
         if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("isRight", true);
@@ -69,14 +69,27 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Attack", true);
         }
-        //Canceling
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)|| Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && Input.GetKey(KeyCode.LeftShift))
         {
-           animator.SetBool("isSprinting", false);
-           animator.SetBool("isBackward", false);
-           animator.SetBool("isLeft", false);
-           animator.SetBool("isRight", false);
-           animator.SetBool("Attack", false);
+            animator.SetBool("dashAttack", true);
+        }
+        /*if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            moveVelocity = transform.forward * attackSpeed * Time.deltaTime;
+        }//Saldýrý da hareket
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_Stab"))
+        {
+            transform.Translate(transform.forward * attackSpeed * Time.deltaTime);
+        }*/
+        //Canceling
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            animator.SetBool("isSprinting", false);
+            animator.SetBool("isBackward", false);
+            animator.SetBool("isLeft", false);
+            animator.SetBool("isRight", false);
+            animator.SetBool("Attack", false);
+            animator.SetBool("dashAttack", false);
         }
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensivity, 0);
         xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensivity;
@@ -84,6 +97,7 @@ public class PlayerController : MonoBehaviour
         // Camera.main.transform.localRotation = Quaternion.Euler(xRotation, 0, 0); aþaðý bakma
 
         characterController.Move(moveVelocity);
+        //print(moveVelocity);
     }
     //Roll Animation Cancel Timer
     void ResetRoCooldown()
