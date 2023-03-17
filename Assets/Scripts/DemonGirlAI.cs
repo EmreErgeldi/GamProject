@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
 public class DemonGirlAI : MonoBehaviour
@@ -27,12 +28,12 @@ public class DemonGirlAI : MonoBehaviour
             agent.SetDestination(target.position);
             
             animator.SetBool("chasePlayer", true);
-            animator.SetInteger("attackNumber", 4);
+            animator.SetBool("isAttacking", false);
             agent.isStopped = false;
+
             if(distance < agent.stoppingDistance)
             {
                 FaceTarget();
-                animator.SetBool("chasePlayer", false);
                 agent.isStopped = true;
                 AttackTarget();
             }
@@ -50,8 +51,7 @@ public class DemonGirlAI : MonoBehaviour
 
     void AttackTarget()
     {
-        int randomAttack = Random.Range(0, 3);
-
-        animator.SetInteger("attackNumber", randomAttack);
+        animator.SetBool("chasePlayer", false);
+        animator.SetBool("isAttacking", true);
     }
 }
