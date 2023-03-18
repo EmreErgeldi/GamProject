@@ -69,18 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Attack", true);
         }
-        if (Input.GetKey(KeyCode.Mouse0) && Input.GetKey(KeyCode.LeftShift))
-        {
-            animator.SetBool("dashAttack", true);
-        }
-        /*if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-        {
-            moveVelocity = transform.forward * attackSpeed * Time.deltaTime;
-        }//Saldýrý da hareket
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_Stab"))
-        {
-            transform.Translate(transform.forward * attackSpeed * Time.deltaTime);
-        }*/
         //Canceling
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -89,7 +77,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isLeft", false);
             animator.SetBool("isRight", false);
             animator.SetBool("Attack", false);
-            animator.SetBool("dashAttack", false);
         }
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensivity, 0);
         xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensivity;
