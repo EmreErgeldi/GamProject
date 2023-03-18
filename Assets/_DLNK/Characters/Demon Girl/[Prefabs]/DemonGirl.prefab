@@ -2006,7 +2006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4104614698926284}
   - component: {fileID: -7135722914521834462}
-  - component: {fileID: 1659885725}
   - component: {fileID: 1659885724}
   m_Layer: 0
   m_Name: DemonGirl
@@ -2045,22 +2044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 20
   animator: {fileID: 95531330028331018}
---- !u!54 &1659885725
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639818050706832}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &1659885724
 NavMeshAgent:
   m_ObjectHideFlags: 0

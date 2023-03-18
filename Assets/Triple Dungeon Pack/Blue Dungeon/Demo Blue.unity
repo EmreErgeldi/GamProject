@@ -6044,18 +6044,6 @@ PrefabInstance:
     - target: {fileID: 1389651713, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: rb
       value: 
-      objectReference: {fileID: 1389651715}
-    - target: {fileID: 1389651713, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1389651712}
-    - target: {fileID: 1823087255213818773, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: m_Constraints
-      value: 84
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823087255213818773, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_Name
@@ -6105,14 +6093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4957605393579145647, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957605393579145647, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5ca35603eb42c4e45bb895cde944c341, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
 --- !u!1 &139981237
@@ -44990,16 +44970,6 @@ GameObject:
 --- !u!4 &1389651709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-  m_PrefabInstance: {fileID: 137854768}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1389651712 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4957605393579145647, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-  m_PrefabInstance: {fileID: 137854768}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1389651715 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1823087255213818773, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
   m_PrefabInstance: {fileID: 137854768}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1390651272
