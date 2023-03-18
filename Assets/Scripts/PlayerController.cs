@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     private float xRotation = 0f;
     public float attackSpeed = 5f;
     private bool getHit = false;
-    private bool isAlive = true;
 
 
     // Start is called before the first frame update
