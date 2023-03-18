@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     public float mouseSensivity = 700f;
     private float xRotation = 0f;
     public float attackSpeed = 5f;
+    private bool getHit = false;
+    private bool isAlive = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator.SetTrigger("Revive");
     }
     private void Awake()
     {
@@ -69,14 +71,26 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Attack", true);
         }
+        //Get Hit
+        if (Input.GetKey(KeyCode.G) || getHit == true)
+        {
+            animator.SetBool("GetHit", true);
+        }
+        else if(getHit == false) 
+        {
+            animator.SetBool("GetHit", false);
+            Invoke("ResetRoCooldown", 3.3f);
+        }
         //Canceling
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.G) || Input.GetKeyUp(KeyCode.R))
         {
             animator.SetBool("isSprinting", false);
             animator.SetBool("isBackward", false);
             animator.SetBool("isLeft", false);
             animator.SetBool("isRight", false);
             animator.SetBool("Attack", false);
+            //animator.SetBool("GetHit", false);
+
         }
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensivity, 0);
         xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensivity;
