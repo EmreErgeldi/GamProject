@@ -25,6 +25,15 @@ public class IsometricController : MonoBehaviour
         {
             rb.Sleep();
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            animator.SetBool("deneme", true);
+            sword.SetParent(swordRest);
+            sword.localPosition = new Vector3(0f, -.4f, 0f);
+            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+       
     }
 
    void HandleCombo()
@@ -32,6 +41,7 @@ public class IsometricController : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             animator.SetBool("combo", true);
+            animator.SetBool("deneme", false);
             sword.SetParent(rightHand);
             sword.localPosition = new Vector3(0f, 0f, 0f);
             sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -39,9 +49,9 @@ public class IsometricController : MonoBehaviour
         else if(Input.GetMouseButtonUp(0))
         {
             animator.SetBool("combo", false);
-            sword.SetParent(swordRest);
+            /*sword.SetParent(swordRest);
             sword.localPosition = new Vector3(0f, -.4f, 0f);
-            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);*/
         }
     }
 

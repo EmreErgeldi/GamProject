@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.21960784, g: 0.26666668, b: 0.43529412, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.05
+  m_FogDensity: 0.06
   m_LinearFogStart: 5
   m_LinearFogEnd: 25
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -48120,6 +48120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DemonGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4104614698926284, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -64041,6 +64045,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e58e375f5ed38074480b5df1226c7bc3, type: 3}
       propertyPath: m_Name
       value: Troll
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e58e375f5ed38074480b5df1226c7bc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e58e375f5ed38074480b5df1226c7bc3, type: 3}
