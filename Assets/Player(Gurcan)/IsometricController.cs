@@ -18,7 +18,7 @@ public class IsometricController : MonoBehaviour
     [SerializeField] private Transform swordRest;
 
     [Header("Dash")]
-    [SerializeField] private float dashSpeed = 100f;
+    [SerializeField] private float dashSpeed = 50f;
 
     
     private void Update()
@@ -32,7 +32,7 @@ public class IsometricController : MonoBehaviour
         
         SheathBack();
 
-        
+        Dash();
     }
 
     private void FixedUpdate()
@@ -47,6 +47,17 @@ public class IsometricController : MonoBehaviour
             rb.Sleep();
         }
     }
+
+    void Dash()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = transform.forward * dashSpeed;
+        }
+        
+    }
+
+    #region Sword
 
     void SheathBack()
     {
@@ -99,14 +110,7 @@ public class IsometricController : MonoBehaviour
         }
     }
 
-   void Dash()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(transform.forward * dashSpeed, ForceMode.VelocityChange);
-            Debug.Log(rb.IsSleeping());
-        }
-    }
+    #endregion
 
     void GatherInput()
     {
