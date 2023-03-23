@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class IsometricController : MonoBehaviour
@@ -8,11 +9,17 @@ public class IsometricController : MonoBehaviour
     public float speed = 10f;
     [SerializeField] private float turnSpeed = 1080f;
 
+    [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    [Header("Combat")]
     [SerializeField] private Transform sword;
     [SerializeField] private Transform rightHand;
     [SerializeField] private Transform swordRest;
+
+    [Header("Dash")]
+    [SerializeField] private float dashSpeed = 100f;
+
     
     private void Update()
     {
@@ -21,45 +28,84 @@ public class IsometricController : MonoBehaviour
         HandeAnimations();
         HandleCombo();
 
-        if(!Input.GetKey(KeyCode.W))
-        {
-            rb.Sleep();
-        }
+        HandleRigidbody();
+        
+        SheathBack();
 
-        if(Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            animator.SetBool("deneme", true);
-            sword.SetParent(swordRest);
-            sword.localPosition = new Vector3(0f, -.4f, 0f);
-            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-       
+        
     }
-
-   void HandleCombo()
-    {
-        if(Input.GetMouseButton(0))
-        {
-            animator.SetBool("combo", true);
-            animator.SetBool("deneme", false);
-            sword.SetParent(rightHand);
-            sword.localPosition = new Vector3(0f, 0f, 0f);
-            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-        else if(Input.GetMouseButtonUp(0))
-        {
-            animator.SetBool("combo", false);
-            /*sword.SetParent(swordRest);
-            sword.localPosition = new Vector3(0f, -.4f, 0f);
-            sword.localRotation = Quaternion.Euler(0f, 0f, 0f);*/
-        }
-    }
-
-    
 
     private void FixedUpdate()
     {
         Move();
+    }
+
+    void HandleRigidbody()
+    {
+        if(!animator.GetBool("isRunning"))
+        {
+            rb.Sleep();
+        }
+    }
+
+    void SheathBack()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (rb.IsSleeping())
+            {
+                StartCoroutine(DelaySheath());
+            }
+            else
+            {
+                animator.SetBool("sheath", true);
+                sword.SetParent(swordRest);
+                sword.localPosition = new Vector3(0f, -.4f, 0f);
+                sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+            
+        }
+    }
+
+    IEnumerator DelaySheath()
+    {
+        animator.SetBool("sheath", true);
+        yield return new WaitForSeconds(.4f);
+        sword.SetParent(swordRest);
+        sword.localPosition = new Vector3(0f, -.4f, 0f);
+        sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    IEnumerator DelayDraw()
+    {
+        yield return new WaitForSeconds(.4f);
+        sword.SetParent(rightHand);
+        sword.localPosition = new Vector3(0f, 0f, 0f);
+        sword.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+   void HandleCombo()
+    {
+        if(Input.GetMouseButton(0) && rb.IsSleeping())
+        {
+            animator.SetBool("combo", true);
+            animator.SetBool("sheath", false);
+            StartCoroutine(DelayDraw());
+            
+        }
+        else if(Input.GetMouseButtonUp(0))
+        {
+            animator.SetBool("combo", false);
+        }
+    }
+
+   void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(transform.forward * dashSpeed, ForceMode.VelocityChange);
+            Debug.Log(rb.IsSleeping());
+        }
     }
 
     void GatherInput()
@@ -69,7 +115,11 @@ public class IsometricController : MonoBehaviour
 
     void Move()
     {
-        rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.fixedDeltaTime);
+        if (!animator.GetBool("combo"))
+        {
+            rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.fixedDeltaTime);
+        }
+        
     }
     
     void Look()
