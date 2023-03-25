@@ -6047,7 +6047,7 @@ PrefabInstance:
       objectReference: {fileID: 1099452885}
     - target: {fileID: 1389651713, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: dashSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1389651713, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: rightHand
