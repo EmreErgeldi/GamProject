@@ -17,10 +17,14 @@ public class IsometricController : MonoBehaviour
     [SerializeField] private Transform rightHand;
     [SerializeField] private Transform swordRest;
 
-    [Header("Dash")]
-    [SerializeField] private float dashSpeed = 50f;
+    [Header("Roll")]
+    [SerializeField] private float rollSpeed = 20f;
 
-    
+    private void Start()
+    {
+        animator.SetBool("sheath", true);
+    }
+
     private void Update()
     {
         GatherInput();
@@ -32,7 +36,7 @@ public class IsometricController : MonoBehaviour
         
         SheathBack();
 
-        Dash();
+        StartCoroutine(Roll());
     }
 
     private void FixedUpdate()
@@ -48,11 +52,18 @@ public class IsometricController : MonoBehaviour
         }
     }
 
-    void Dash()
+    IEnumerator Roll() 
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = transform.forward * dashSpeed;
+            if(!animator.GetCurrentAnimatorStateInfo(0).IsName("RollForward"))
+            {
+                animator.SetTrigger("roll");
+                yield return new WaitForSeconds(.3f);
+                rb.velocity = transform.forward * rollSpeed;
+            }
+            
+
         }
         
     }
