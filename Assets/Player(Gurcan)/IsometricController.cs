@@ -56,9 +56,14 @@ public class IsometricController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetTrigger("roll");
-            yield return new WaitForSeconds(.3f);
-            rb.velocity = transform.forward * rollSpeed;
+            if(!animator.GetCurrentAnimatorStateInfo(0).IsName("RollForward"))
+            {
+                animator.SetTrigger("roll");
+                yield return new WaitForSeconds(.3f);
+                rb.velocity = transform.forward * rollSpeed;
+            }
+            
+
         }
         
     }
