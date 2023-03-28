@@ -6041,6 +6041,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1143972894, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: m_Radius
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143972894, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389651713, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 810226662}
+    - target: {fileID: 1389651714, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628997557619250799, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2816336517644021494, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: staminaText
       value: 
@@ -11194,7 +11214,6 @@ GameObject:
   - component: {fileID: 150665590}
   - component: {fileID: 150665589}
   - component: {fileID: 150665588}
-  - component: {fileID: 150665592}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11276,20 +11295,6 @@ Transform:
   m_Father: {fileID: 810226662}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &150665592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150665587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200c4b105c88fd941bd29ca672785f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1389651709}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &158229030
 GameObject:
   m_ObjectHideFlags: 0
@@ -34315,6 +34320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810226662}
+  - component: {fileID: 810226663}
   m_Layer: 0
   m_Name: CameraPivot
   m_TagString: Untagged
@@ -34330,7 +34336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810226661}
   m_LocalRotation: {x: 0.31598538, y: 0.3596048, z: -0.13088542, w: 0.8681629}
-  m_LocalPosition: {x: -45.98, y: 10, z: 33}
+  m_LocalPosition: {x: -45, y: 10, z: 33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34338,6 +34344,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 40, y: 45, z: 0}
+--- !u!114 &810226663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810226661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200c4b105c88fd941bd29ca672785f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1389651709}
+  yawSpeed: 100
 --- !u!1 &810270783
 GameObject:
   m_ObjectHideFlags: 0
@@ -42360,6 +42380,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149950509}
   m_Mesh: {fileID: 4300176, guid: 4e15996ba1e2f4b4392985ef6ac6b27c, type: 3}
+--- !u!1 &1153729524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1430438134416629, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+  m_PrefabInstance: {fileID: 137854768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1153729530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153729524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03890217, y: 1.267877, z: 0.095940135}
+  m_Center: {x: 0.0078034233, y: 0.8958633, z: 0.00000022749121}
 --- !u!1 &1160805664
 GameObject:
   m_ObjectHideFlags: 0
@@ -48149,10 +48187,6 @@ PrefabInstance:
     - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_Name
       value: DemonGirl
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4104614698926284, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_RootOrder

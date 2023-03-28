@@ -20,6 +20,14 @@ public class IsometricController : MonoBehaviour
     [Header("Roll")]
     [SerializeField] private float rollSpeed = 20f;
 
+    [Header("Move Towards Camera Rotation")]
+    public Transform cam;
+    private Matrix4x4 isoMatrix;
+    private Vector3 ToIso(Vector3 input, Matrix4x4 matrix)
+    {
+        return matrix.MultiplyPoint3x4(input);
+    }
+
     private void Start()
     {
         animator.SetBool("sheath", true);
@@ -37,6 +45,8 @@ public class IsometricController : MonoBehaviour
         SheathBack();
 
         StartCoroutine(Roll());
+        isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0f, cam.localRotation.eulerAngles.y, 0f));
+        
     }
 
     private void FixedUpdate()
@@ -54,13 +64,14 @@ public class IsometricController : MonoBehaviour
 
     IEnumerator Roll() 
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && PlayerStats.stamina >= 20)
         {
-            if(!animator.GetCurrentAnimatorStateInfo(0).IsName("RollForward"))
+            if(!animator.GetCurrentAnimatorStateInfo(0).IsName("RollForward"))  
             {
                 animator.SetTrigger("roll");
                 yield return new WaitForSeconds(.3f);
                 rb.velocity = transform.forward * rollSpeed;
+                PlayerStats.stamina -= 20;
             }
             
 
@@ -132,7 +143,7 @@ public class IsometricController : MonoBehaviour
     {
         if (!animator.GetBool("combo"))
         {
-            rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.fixedDeltaTime);
+            rb.MovePosition(transform.position + speed * Time.fixedDeltaTime * (transform.forward * input.magnitude));
         }
         
     }
@@ -141,7 +152,7 @@ public class IsometricController : MonoBehaviour
     {
         if(input != Vector3.zero)
         {
-            var relative = (transform.position + input.ToIso()) - transform.position;
+            var relative = (transform.position + ToIso(input, isoMatrix)) - transform.position;
             var rot = Quaternion.LookRotation(relative, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, turnSpeed * Time.deltaTime);

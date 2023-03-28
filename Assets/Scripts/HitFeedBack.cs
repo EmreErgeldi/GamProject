@@ -6,9 +6,10 @@ public class HitFeedBack : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator animator;
+    private Animator playerAnimator;
     void Start()
     {
-
+        playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class HitFeedBack : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sword"))
+        if (other.CompareTag("Sword") && playerAnimator.GetBool("combo"))
         {
             animator.SetTrigger("GetHit");
         }

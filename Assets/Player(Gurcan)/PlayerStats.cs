@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float stamina;
+    public static float stamina;
     [SerializeField] private Text staminaText;
     void Start()
     {
@@ -14,19 +14,21 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            if(stamina < 20)
-            {
-                Debug.Log("Stamina yetersiz !");
-                return;
-            } 
-            
-            stamina -= 20f;
-            staminaText.text = "Stamina : " + stamina.ToString();
-        }
+       HandleStamina();
+
     }
 
-    
+    void HandleStamina()
+    {
+        staminaText.text = "Stamina : " + ((int)stamina).ToString();
+        if(stamina < 100)
+        {
+            stamina += 1 * Time.deltaTime;
+        }
+
+        else if(stamina > 100)
+        {
+            stamina = 100;
+        }
+    }
 }
