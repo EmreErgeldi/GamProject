@@ -441,7 +441,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 154085502461857994}
-    m_Position: {x: 130, y: 370, z: 0}
+    m_Position: {x: 140, y: 370, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4616879834108436927}
     m_Position: {x: 600, y: 360, z: 0}
@@ -456,13 +456,13 @@ AnimatorStateMachine:
     m_Position: {x: 110, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 141651514418136652}
-    m_Position: {x: 600, y: 550, z: 0}
+    m_Position: {x: 610, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1502468903600386270}
     m_Position: {x: 140, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1999862325844521919}
-    m_Position: {x: 350, y: 280, z: 0}
+    m_Position: {x: 370, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8054646274297661712}
     m_Position: {x: 380, y: 140, z: 0}
@@ -495,25 +495,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: chasePlayer
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: GetHit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
