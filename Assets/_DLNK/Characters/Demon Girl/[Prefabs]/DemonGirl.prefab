@@ -708,7 +708,6 @@ GameObject:
   - component: {fileID: 4406091774302054}
   - component: {fileID: 33071801290328816}
   - component: {fileID: 23514179684363448}
-  - component: {fileID: 1659885726}
   - component: {fileID: 7794909629199360596}
   m_Layer: 0
   m_Name: weapon1
@@ -782,19 +781,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1659885726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308802890659348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3333a03e4af56ac4cbc36c67d7d6e271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAnimator: {fileID: 95531330028331018}
 --- !u!64 &7794909629199360596
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -803,7 +789,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308802890659348}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -2865,6 +2851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4007570355682014}
   - component: {fileID: 95531330028331018}
+  - component: {fileID: 8459983416330179562}
   m_Layer: 0
   m_Name: DemonGirlMesh
   m_TagString: Untagged
@@ -2917,6 +2904,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8459983416330179562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836169572417686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3333a03e4af56ac4cbc36c67d7d6e271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: 0}
 --- !u!1 &1913574669139202
 GameObject:
   m_ObjectHideFlags: 0

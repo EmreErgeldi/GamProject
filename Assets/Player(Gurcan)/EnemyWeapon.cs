@@ -5,21 +5,9 @@ using UnityEngine;
 public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] private Animator enemyAnimator;
-
-    private void OnTriggerEnter(Collider other)
+   
+    public void DamagePlayer()
     {
-        if(other.gameObject.CompareTag("Player"))
-        {
-             if(enemyAnimator.GetBool("isAttacking"))
-             {
-                 PlayerStats.health -= 10f;
-                 if(PlayerStats.health < 0)
-                 {
-                     Destroy(GameObject.Find("Player"));
-                 }
-             }
-
-            
-        }
+        PlayerStats.health -= 10f;
     }
 }
