@@ -46,6 +46,7 @@ public class IsometricController : MonoBehaviour
 
         StartCoroutine(Roll());
         isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0f, cam.localRotation.eulerAngles.y, 0f));
+        HandleSkills();
         
     }
 
@@ -169,6 +170,30 @@ public class IsometricController : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("isRunning", false);
+        }
+    }
+
+    void HandleSkills()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            animator.SetTrigger("skill_one");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            animator.SetTrigger("skill_two");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            animator.SetTrigger("skill_three");
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            animator.SetBool("ultimate", true);
+        }
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            animator.SetBool("ultimate", false);
         }
     }
 }
