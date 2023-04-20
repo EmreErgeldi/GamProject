@@ -47,8 +47,7 @@ public class IsometricController : MonoBehaviour
         StartCoroutine(Roll());
         isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0f, cam.localRotation.eulerAngles.y, 0f));
         HandleSkills();
-        
-        
+       
     }
 
     private void FixedUpdate()
