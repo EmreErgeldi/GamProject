@@ -23,11 +23,11 @@ public class IsometricController : MonoBehaviour
     [Header("Move Towards Camera Rotation")]
     public Transform cam;
     private Matrix4x4 isoMatrix;
+
     private Vector3 ToIso(Vector3 input, Matrix4x4 matrix)
     {
         return matrix.MultiplyPoint3x4(input);
     }
-
     private void Start()
     {
         animator.SetBool("sheath", true);
@@ -47,6 +47,7 @@ public class IsometricController : MonoBehaviour
         StartCoroutine(Roll());
         isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0f, cam.localRotation.eulerAngles.y, 0f));
         HandleSkills();
+        
        
     }
 
@@ -160,16 +161,19 @@ public class IsometricController : MonoBehaviour
         }
         
     }
-
+    
     void HandeAnimations()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             animator.SetBool("isRunning", true);
+
+            
         }
         else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("isRunning", false);
+
         }
     }
 
