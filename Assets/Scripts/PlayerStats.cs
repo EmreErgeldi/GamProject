@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
        HandleStats();
-
+       Debug.Assert(health >= 0, "Health can't be negative!");
     }
 
     void HandleStats()
@@ -44,6 +44,8 @@ public class PlayerStats : MonoBehaviour
         {
             health = 100;
         }
+        if (health < 0) { health = 0; }
     }
+
 
 }
