@@ -6,15 +6,21 @@ public class EnemyCombat : MonoBehaviour
     [SerializeField] Animator player;
     public void ActivateCollider()
     {
-        weapon.isTrigger = true;
         weapon.enabled = true;
-        player.SetTrigger("takeDamage");
-        //PlayerStats.health -= 10f;
+        
     }
 
     public void DeactivateCollider()
     {
         weapon.enabled = false;
-        weapon.isTrigger = true;
+    }
+
+    public void DealDamage()
+    {
+        if(!player.GetBool("isRunning"))
+        {
+            player.SetTrigger("takeDamage");
+        }
+            
     }
 }
