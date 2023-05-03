@@ -6134,14 +6134,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 810226662}
-    - target: {fileID: 4467190093663826370, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467190093663826370, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
+    - target: {fileID: 1389651720, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: sheathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 187d81c8ef3efbb4b98185d71a610a49, type: 3}
+    - target: {fileID: 1389651720, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: footstepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80709141e0b67d8479047ada019672e0, type: 3}
     - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -40508,7 +40508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1071251257, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
       propertyPath: m_StoppingDistance
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1000013586557078, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
       propertyPath: m_Name
