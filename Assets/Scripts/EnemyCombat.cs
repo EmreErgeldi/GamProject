@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    [SerializeField] MeshCollider weapon;
+    [SerializeField] Collider weapon;
     [SerializeField] Animator player;
     public void ActivateCollider()
     {
@@ -22,5 +22,14 @@ public class EnemyCombat : MonoBehaviour
             player.SetTrigger("takeDamage");
         }
             
+    }
+
+    public void WizardAttack()
+    {
+        if (!player.GetBool("isRunning"))
+        {
+            player.SetTrigger("takeDamage");
+            PlayerStats.health -= 20;
+        }
     }
 }
