@@ -2454,6 +2454,7 @@ GameObject:
   - component: {fileID: 5501127171727790874}
   - component: {fileID: 2816336517644021494}
   - component: {fileID: 1389651720}
+  - component: {fileID: 3702608349237888885}
   m_Layer: 0
   m_Name: HumanMale_Character_Free
   m_TagString: Player
@@ -2575,6 +2576,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95450fac5a662d248b6913887bf8a0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepClip: {fileID: 8300000, guid: 80709141e0b67d8479047ada019672e0, type: 3}
+  sheathClip: {fileID: 8300000, guid: 187d81c8ef3efbb4b98185d71a610a49, type: 3}
+--- !u!114 &3702608349237888885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957605393579145644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6ee21d82fabf74aacb501e7b93e27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wizard: {fileID: 0}
 --- !u!1 &4957605393584318338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5598,6 +5614,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de82f2050779844e840890abdb725d4, type: 3}
+--- !u!1 &1599586738333092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1599587151244576, guid: 0de82f2050779844e840890abdb725d4, type: 3}
+  m_PrefabInstance: {fileID: 683444356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &727491806086662622
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599586738333092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
 --- !u!4 &4861691534557724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4861692195392152, guid: 0de82f2050779844e840890abdb725d4, type: 3}

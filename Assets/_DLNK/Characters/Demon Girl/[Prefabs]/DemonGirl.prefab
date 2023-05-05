@@ -2035,13 +2035,14 @@ GameObject:
   - component: {fileID: 4104614698926284}
   - component: {fileID: -7135722914521834462}
   - component: {fileID: 1659885724}
+  - component: {fileID: 574511029}
   m_Layer: 0
   m_Name: DemonGirl
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4104614698926284
 Transform:
   m_ObjectHideFlags: 0
@@ -2094,6 +2095,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &574511029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639818050706832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6c592782a11fa4f89971fe863c28c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armorValue: 15
 --- !u!1 &1641359354525550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +2944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 7794909629199360596}
+  player: {fileID: 0}
 --- !u!1 &1913574669139202
 GameObject:
   m_ObjectHideFlags: 0
