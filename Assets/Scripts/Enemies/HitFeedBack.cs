@@ -6,12 +6,14 @@ public class HitFeedBack : MonoBehaviour
 {
     public static float EnemyHealth;
     string getEnemyName;
+    Collider[] colliders;
     EnemyAI EAI;
     EnemyAIRanged EAIR;
     private Animator animator;
     private Animator playerAnimator;
     void Start()
     {
+        colliders = gameObject.GetComponents<Collider>();
         playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
         animator = GetComponent<Animator>();
         EAI = GetComponent<EnemyAI>();
@@ -30,7 +32,7 @@ public class HitFeedBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(EnemyHealth);
+       print(EnemyHealth);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -43,8 +45,12 @@ public class HitFeedBack : MonoBehaviour
     }
     void Diead()
     {
-        if(EnemyHealth <=0)
+        if(EnemyHealth <=0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Die"))
         {
+            foreach (Collider col in colliders)
+            {
+                col.enabled = false;
+            }
             animator.SetTrigger("Die");
             Destroy(EAI);
             Destroy(EAIR);

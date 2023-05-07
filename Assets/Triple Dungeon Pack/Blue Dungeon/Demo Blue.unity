@@ -65323,6 +65323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DemonGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 8867781602815458053, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8870954532712375897, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_RootOrder
       value: 3
