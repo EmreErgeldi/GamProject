@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4807378906527954953, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
+      propertyPath: m_TagString
+      value: Skeleton
+      objectReference: {fileID: 0}
     - target: {fileID: 4895079360154171290, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
       propertyPath: m_Enabled
       value: 1
