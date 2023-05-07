@@ -6,6 +6,7 @@ public class HitFeedBack : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator animator;
+    [SerializeField]
     private Animator playerAnimator;
     void Start()
     {
@@ -14,8 +15,8 @@ public class HitFeedBack : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
+
     }
     private void Awake()
     {
@@ -23,9 +24,13 @@ public class HitFeedBack : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Sword") && playerAnimator.GetBool("combo"))
         {
+           
             animator.SetTrigger("GetHit");
+            
         }
     }
+
 }

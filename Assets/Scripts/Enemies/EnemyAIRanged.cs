@@ -14,6 +14,8 @@ public class EnemyAIRanged : MonoBehaviour
     private float maxradius = 30f;
     NavMeshAgent agent;
     public Animator animator;
+    public GameObject arrow;
+    public Transform firePoint;
     float distance;
     private void Awake()
     {
@@ -53,5 +55,9 @@ public class EnemyAIRanged : MonoBehaviour
     {
         animator.SetBool("chasePlayer", false);
         animator.SetBool("isAttacking", true);
+    }
+    void AnimationEvent()
+    {
+        Instantiate(arrow, firePoint.position, transform.rotation);
     }
 }

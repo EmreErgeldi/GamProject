@@ -22,6 +22,10 @@ public class Arrow : MonoBehaviour
         transform.Translate(Vector3.up * -1 * Time.deltaTime * speed);
         Destroy(this.gameObject, 3f);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerStats.health -= 5f;
+    }
 
 
 }

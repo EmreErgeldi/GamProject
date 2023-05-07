@@ -5,7 +5,6 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public float lookRadius = 20f;
-    ArchererScript ArchererScript;
     private Transform target;
     NavMeshAgent agent;
 
@@ -53,6 +52,5 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetBool("chasePlayer", false);
         animator.SetBool("isAttacking", true);
-        //Invoke("ArchererScript.Fire", 1f);
     }
 }
