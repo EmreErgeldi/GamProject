@@ -6142,6 +6142,10 @@ PrefabInstance:
       propertyPath: wizard
       value: 
       objectReference: {fileID: 2015384471}
+    - target: {fileID: 3702608349237888885, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: demonGirl
+      value: 
+      objectReference: {fileID: 1297720640}
     - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -40287,6 +40291,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1389651714}
+    - target: {fileID: 2015384475, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2015384471}
     - target: {fileID: 1000013586557078, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
       propertyPath: m_Name
       value: wizard_weapon_macanim DEMO
@@ -44462,6 +44470,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &1297720640 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8810736561649206943, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
+  m_PrefabInstance: {fileID: 8869103917976813071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1299784603
 GameObject:
   m_ObjectHideFlags: 0
@@ -65326,10 +65339,6 @@ PrefabInstance:
     - target: {fileID: 8867781602815458053, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_Name
       value: DemonGirl
-      objectReference: {fileID: 0}
-    - target: {fileID: 8867781602815458053, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868086143728963713, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_IsActive
