@@ -65132,6 +65132,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6496929917306411797, guid: 35d5b1aab2f91a949a82bbccdb5c350a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 72372615554888106, guid: 35d5b1aab2f91a949a82bbccdb5c350a, type: 3}
       propertyPath: m_Name
       value: SkeletonArcherer
@@ -65197,10 +65201,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonWarriorUnity
       objectReference: {fileID: 0}
-    - target: {fileID: 4845206686091881199, guid: c22f2894aa4f9b0408f68d39f965df4e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5221485491243380821, guid: c22f2894aa4f9b0408f68d39f965df4e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -65260,7 +65260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2265684333749895835, guid: 1b5321902c13f554eb9957c5773c390b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2966194563057873032, guid: 1b5321902c13f554eb9957c5773c390b, type: 3}
       propertyPath: m_RootOrder
@@ -65324,6 +65324,10 @@ PrefabInstance:
       value: DemonGirl
       objectReference: {fileID: 0}
     - target: {fileID: 8867781602815458053, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868086143728963713, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

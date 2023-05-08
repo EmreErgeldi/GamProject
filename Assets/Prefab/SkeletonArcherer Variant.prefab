@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: c7e1ddc8ab1d9e14999f483c228cd469, type: 2}
     - target: {fileID: 4807378906527954953, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
       propertyPath: m_Name
-      value: SkeletonArcherer Variant
+      value: SkeletonArcherer
       objectReference: {fileID: 0}
     - target: {fileID: 4807378906527954953, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
       propertyPath: m_IsActive
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5331396684007973555, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.667
+      value: 4.17
       objectReference: {fileID: 0}
     - target: {fileID: 5331396684007973555, guid: 8c78a47f60bcba3449258f2f1232e9a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -128,10 +128,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.15705189
+  m_Radius: 0.20749187
   m_Height: 1.9028187
   m_Direction: 1
-  m_Center: {x: -0.0023109466, y: 0.87885714, z: -0.009362847}
+  m_Center: {x: -0.0028104782, y: 0.87885714, z: -0.009362847}
 --- !u!114 &275945097
 MonoBehaviour:
   m_ObjectHideFlags: 0

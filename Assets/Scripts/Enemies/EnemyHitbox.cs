@@ -4,7 +4,13 @@ public class EnemyHitbox : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        PlayerStats.health -= 10f;
+        if (other.CompareTag("Player"))
+        {
+
+            PlayerStats.health -= 10f;
+
+        }
+        
         
     }
 }
