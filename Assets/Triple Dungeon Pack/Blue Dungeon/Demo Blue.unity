@@ -65201,6 +65201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonWarriorUnity
       objectReference: {fileID: 0}
+    - target: {fileID: 4845206686091881199, guid: c22f2894aa4f9b0408f68d39f965df4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5221485491243380821, guid: c22f2894aa4f9b0408f68d39f965df4e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -65325,7 +65329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8867781602815458053, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868086143728963713, guid: 2465367209f2acf48b44def2ed6461a5, type: 3}
       propertyPath: m_IsActive
