@@ -21,6 +21,10 @@ public class EnemyAI : MonoBehaviour
     
     void Update()
     {
+        if(GameManager.gameOver)
+        {
+            animator.SetBool("gameOver", true);
+        }
         distance = Vector3.Distance(target.position, transform.position);
        
         if(distance <= lookRadius)

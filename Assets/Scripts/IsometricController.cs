@@ -48,12 +48,21 @@ public class IsometricController : MonoBehaviour
         isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0f, cam.localRotation.eulerAngles.y, 0f));
         HandleSkills();
         
-       
+        HandleDeath();
     }
 
     private void FixedUpdate()
     {
         Move();
+    }
+
+    private void HandleDeath()
+    {
+        if(PlayerStats.health <= 0)
+        {
+            animator.SetTrigger("isDead");
+            GameManager.gameOver = true;
+        }
     }
 
     void HandleRigidbody()

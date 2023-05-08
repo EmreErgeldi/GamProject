@@ -6138,6 +6138,10 @@ PrefabInstance:
       propertyPath: wizard
       value: 
       objectReference: {fileID: 2015384471}
+    - target: {fileID: 3702608349237888885, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: demonGirl
+      value: 
+      objectReference: {fileID: 307697071}
     - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -40516,9 +40520,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1389651714}
+    - target: {fileID: 2015384475, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2015384471}
     - target: {fileID: 1000013586557078, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
       propertyPath: m_Name
       value: wizard_weapon_macanim DEMO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013586557078, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011578242470, guid: 3c9c8a8bf50e6b5439ab9db67bc82586, type: 3}
       propertyPath: m_RootOrder
@@ -48791,17 +48803,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 574511029, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 307697071}
     - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_Name
       value: DemonGirl
       objectReference: {fileID: 0}
     - target: {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4104614698926284, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
       propertyPath: m_RootOrder
@@ -48851,8 +48859,15 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1389651714}
-    m_RemovedComponents:
-    - {fileID: 574511029, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
+    - target: {fileID: 9035376783648719754, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
+      propertyPath: demonGirl
+      value: 
+      objectReference: {fileID: 307697071}
+    - target: {fileID: 9035376783648719754, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
+      propertyPath: armorValue
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
 --- !u!1 &1668130970
 GameObject:
@@ -65503,6 +65518,10 @@ PrefabInstance:
     - target: {fileID: 72372615554888106, guid: 35d5b1aab2f91a949a82bbccdb5c350a, type: 3}
       propertyPath: m_Name
       value: SkeletonArcherer
+      objectReference: {fileID: 0}
+    - target: {fileID: 72372615554888106, guid: 35d5b1aab2f91a949a82bbccdb5c350a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741631786478283536, guid: 35d5b1aab2f91a949a82bbccdb5c350a, type: 3}
       propertyPath: m_RootOrder

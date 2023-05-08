@@ -1,12 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class WizardStats : MonoBehaviour
+public class DemonGirlStats : MonoBehaviour
 {
     public static int health = 100;
     public static int armor;
     public int armorValue;
-    public Animator wizard;
+    public Animator demonGirl;
     void Start()
     {
         armor = armorValue;
@@ -17,7 +19,7 @@ public class WizardStats : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            
+
         }
     }
     public static void TakeDamage()
@@ -28,7 +30,7 @@ public class WizardStats : MonoBehaviour
 
     private void Die()
     {
-        wizard.SetTrigger("isDead");
+        demonGirl.SetTrigger("isDead");
         Destroy(gameObject, 2f);
     }
 }
