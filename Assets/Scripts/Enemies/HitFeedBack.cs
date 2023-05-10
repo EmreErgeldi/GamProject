@@ -32,7 +32,7 @@ public class HitFeedBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       print(EnemyHealth);
+       //print(EnemyHealth);
     }
     private void OnTriggerEnter(Collider other)
     {
