@@ -5,7 +5,6 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public float lookRadius = 20f;
-    
     private Transform target;
     NavMeshAgent agent;
 
@@ -21,8 +20,12 @@ public class EnemyAI : MonoBehaviour
     
     void Update()
     {
+        if(GameManager.gameOver)
+        {
+            animator.SetBool("gameOver", true);
+        }
         distance = Vector3.Distance(target.position, transform.position);
-
+       
         if(distance <= lookRadius)
         {
             agent.SetDestination(target.position);
