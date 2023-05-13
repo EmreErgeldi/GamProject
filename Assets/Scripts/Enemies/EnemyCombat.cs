@@ -32,4 +32,13 @@ public class EnemyCombat : MonoBehaviour
             PlayerStats.health -= 20;
         }
     }
+
+    public void DragonAttack()
+    {
+		if (!player.GetBool("isRunning"))
+		{
+			player.SetTrigger("takeDamage");
+			PlayerStats.health -= 30;
+		}
+	}
 }

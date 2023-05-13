@@ -27,7 +27,9 @@ public class HitFeedBack : MonoBehaviour
             EnemyHealth = 150f;
         else if (getEnemyName == "Wizard")
             EnemyHealth = 500f;
-    }
+		else if (getEnemyName == "Dragon")
+			EnemyHealth = 500f;
+	}
 
     // Update is called once per frame
     void Update()
