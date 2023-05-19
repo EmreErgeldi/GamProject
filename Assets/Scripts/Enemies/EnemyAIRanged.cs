@@ -46,7 +46,6 @@ public class EnemyAIRanged : MonoBehaviour
         {
             animator.SetBool("chasePlayer", false);
             animator.SetBool("isAttacking", false);
-            print("görme");
         }
         else if (distance < follow_distance)
         {
