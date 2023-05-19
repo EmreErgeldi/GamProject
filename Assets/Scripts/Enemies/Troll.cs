@@ -23,7 +23,7 @@ public class Troll : MonoBehaviour
     }
     void Hit()
     {
-        PlayerStats.health -= 15f;
+        PlayerStats.health -= 5f;
     }
 
 }

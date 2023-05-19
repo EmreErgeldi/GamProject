@@ -17121,6 +17121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armorValue: 25
+  wizard: {fileID: 95000012058624550}
 --- !u!1 &1000013699516860
 GameObject:
   m_ObjectHideFlags: 0
