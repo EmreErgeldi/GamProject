@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
 
         if (health < 100)
         {
-            health += .5f * Time.deltaTime;
+            health += 1f * Time.deltaTime;
         }
 
         if (health > 100)

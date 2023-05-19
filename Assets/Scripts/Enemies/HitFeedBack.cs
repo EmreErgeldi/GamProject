@@ -13,7 +13,7 @@ public class HitFeedBack : MonoBehaviour
     private Animator playerAnimator;
     void Start()
     {
-        colliders = gameObject.GetComponents<Collider>();
+        /*colliders = gameObject.GetComponents<Collider>();
         playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
         animator = GetComponent<Animator>();
         EAI = GetComponent<EnemyAI>();
@@ -28,13 +28,13 @@ public class HitFeedBack : MonoBehaviour
         else if (getEnemyName == "Wizard")
             EnemyHealth = 500f;
 		else if (getEnemyName == "Dragon")
-			EnemyHealth = 500f;
+			EnemyHealth = 500f;*/
 	}
 
     // Update is called once per frame
     void Update()
     {
-       //print(EnemyHealth);
+       print(EnemyHealth);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -1247,7 +1247,6 @@ GameObject:
   - component: {fileID: 7804948108336353190}
   - component: {fileID: 7804948108336353184}
   - component: {fileID: 7804948108336353185}
-  - component: {fileID: 7804948108336353187}
   - component: {fileID: 9134466682831612659}
   m_Layer: 0
   m_Name: Troll 1
@@ -1344,18 +1343,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7804948108336353187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2265684333749895835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b05d6730cbe97842870d33904e6883a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9134466682831612659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,6 +1355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3b33beb2e94ba4f2b3ae51f3830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyHealth: 100
 --- !u!1 &2358607929324689775
 GameObject:
   m_ObjectHideFlags: 0
